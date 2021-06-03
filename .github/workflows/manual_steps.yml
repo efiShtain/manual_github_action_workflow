@@ -1,0 +1,20 @@
+name: "Second Manual Step"
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    my_job:
+        name: "Job One"
+        runs-on: ubuntu-latest
+        environment:
+            name: myEnv.staging
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+            - name: RunAuto
+              run: echo Auto
+            - name: RunManual
+              run: echo Manual
