@@ -3,7 +3,7 @@ name: "Second Manual Step"
 on:
     push:
         branches:
-            - main
+            - master
 
 jobs:
     my_job:
