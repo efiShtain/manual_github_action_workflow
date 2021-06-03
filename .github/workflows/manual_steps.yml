@@ -6,7 +6,16 @@ on:
             - master
 
 jobs:
+    auto_job:
+      name: "job runs automatically"
+      runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+            - name: RunManual
+              run: echo Manual
     my_job:
+        needs: [auto_job]
         name: "Job One"
         runs-on: ubuntu-latest
         environment:
